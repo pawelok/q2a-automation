@@ -8,7 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 public class ProductPage {
 
     private WebDriver driver;
-    private static final String BASE_URL = "https://www.g2a.com";
 
     @FindBy(xpath = "//div[@data-locator='product-info']//h1[@data-locator='ppa-summary__title']")
     private WebElement productTitle;

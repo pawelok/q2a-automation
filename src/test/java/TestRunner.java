@@ -24,14 +24,13 @@ public class TestRunner {
     protected MainPage mainPage;
     protected ProductPage productPage;
     protected YourCartPage yourCartPage;
-    private final String browser = System.getProperty("browser", "chrome");
 
     @BeforeEach
     @SneakyThrows
     public void setUp() {
         WebDriverManager.chromedriver().arm64().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-http2"); // Disable HTTP/2
+        options.addArguments("--disable-http2");
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("--window-size=2560,1440");
         driver = new ChromeDriver(options);
